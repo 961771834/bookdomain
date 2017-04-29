@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bookdomain</title>
+	<style type="text/css">
+		a{
+			text-decoration: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="www/css/style.css">
+</head>
+<body>
+	<div id="container">
+		<div class="title">图书管理系统——————<a href="/toAddBook">添加图书</a></div>
+		<table cellpadding="0" cellspacing="0">
+			<thead>	
+				<tr>
+					<th>编号</th>
+					<th>书名</th>
+					<th>作者</th>
+					<th>分类</th>
+					<th>描述</th>
+					<th>编辑</th>
+					<th>删除</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{each list as item i}}
+				<tr>	
+					<td>{{i + 1}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.author}}</td>
+					<td>{{item.categoty}}</td>
+					<td>{{item.desc}}</td>
+					<td><a href="/toEdit?id={{i+1}}">编辑</a></td>
+					<td><a href="/deleteBook?id={{i+1}}">删除</a></td>	
+				</tr>
+				{{/each}}
+			</tbody>
+
+		</table>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src= "www/js/jquery.js"></script>
+<script type="text/javascript" src = "./www/js/index.js"></script>

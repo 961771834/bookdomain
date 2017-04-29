@@ -1,0 +1,27 @@
+
+body{
+	background: url("../img/book.jpg") no-repeat ;
+	background-size: cover; 
+}
+
+.title{
+	text-align: center;
+	background: lightblue;
+	height: 40px;
+	line-height: 40px;
+}
+
+table{
+	width: 100%;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid blue;
+	border-right: 1px solid blue;
+}
+
+
+table th,td{
+	border-left: 1px solid blue;
+	border-bottom:  1px solid blue;	
+}
